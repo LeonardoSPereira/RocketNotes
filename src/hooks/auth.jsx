@@ -11,14 +11,12 @@ export function AuthProvider({ children }) {
 
 
         try {
-            const response = await api.post("/sessions", { email, password });
-            const { user, token } = response.data;
+            const response = await api.post("/sessions", { email, password }, { withCredentials: true });
+            const { user } = response.data;
 
             localStorage.setItem("@rocketnotes:user", JSON.stringify(user));
-            localStorage.setItem("@rocketnotes:token", token);
 
-            api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-            setData({ user, token })
+            setData({ user })
 
         } catch(error) {
 
@@ -32,7 +30,6 @@ export function AuthProvider({ children }) {
     }
 
     function signOut() {
-        localStorage.removeItem("@rocketnotes:token");
         localStorage.removeItem("@rocketnotes:user");
 
         setData({})
@@ -67,17 +64,15 @@ export function AuthProvider({ children }) {
     }
 
     useEffect(() => {
-        const token = localStorage.getItem("@rocketnotes:token");
         const user = localStorage.getItem("@rocketnotes:user");
 
-        if(token && user) {
-            api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+        if(user) {
 
             setData({
-                token,
                 user: JSON.parse(user)
             })
         }
+        
     }, [])
 
     return (

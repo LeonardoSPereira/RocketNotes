@@ -60,7 +60,7 @@ export function NewNote() {
             description,
             links,
             tags,
-        });
+        }, { withCredentials: true });
 
         alert("Nota cadastrada com sucesso!")
         navigate(-1);

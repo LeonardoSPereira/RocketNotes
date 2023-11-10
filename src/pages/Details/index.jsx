@@ -22,7 +22,7 @@ export function Details() {
     const confirm = window.confirm("Deseja realmente excluir esta nota?");
 
     if(confirm) {
-      await api.delete(`/notes/${params.id}`)
+      await api.delete(`/notes/${params.id}`, { withCredentials: true })
       navigate(-1)
     }
   }
@@ -30,7 +30,7 @@ export function Details() {
   useEffect(() => {
 
     async function fetchDetails() {
-      const response = await api.get(`/notes/${params.id}`);
+      const response = await api.get(`/notes/${params.id}`, { withCredentials: true });
       setData(response.data);
     }
 

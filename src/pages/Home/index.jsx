@@ -44,7 +44,7 @@ export function Home() {
 
         async function fetchTags() {
 
-            const response = await api.get("/tags");
+            const response = await api.get("/tags", { withCredentials: true });
             setTags(response.data);
         }
 
@@ -54,7 +54,7 @@ export function Home() {
     useEffect(() => {
         
         async function fetchNotes() {
-            const response = await api.get(`/notes?title=${search}&tags=${selectedTags}`);
+            const response = await api.get(`/notes?title=${search}&tags=${selectedTags}`, { withCredentials: true });
             setNotes(response.data);
         }
 
