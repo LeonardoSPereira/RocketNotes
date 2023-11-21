@@ -1,7 +1,7 @@
 <h1 align="center">RocketNotes</h1>
 
 
-<img src="./src/assets/Interface.png"/>
+<img src="./src/assets/interface.png"/>
 
 
 <div align="center">
