@@ -29,7 +29,7 @@ export function NewNote() {
     }
 
     function handleRemoveLink(deleted) {
-        setLinks(prevState => prevState.filter(link => link !== deleted))
+        setLinks(prevState => prevState.filter(link => link !== deleted));
     }
 
     function handleAddTag() {
@@ -62,7 +62,7 @@ export function NewNote() {
             tags,
         }, { withCredentials: true });
 
-        alert("Nota cadastrada com sucesso!")
+        alert("Nota cadastrada com sucesso!");
         navigate(-1);
     }
 
@@ -136,5 +136,5 @@ export function NewNote() {
                 </Form>
             </main>
         </Container>
-    )
+    );
 }

@@ -1,4 +1,4 @@
-import { RiShutDownLine } from "react-icons/ri"
+import { RiShutDownLine } from "react-icons/ri";
 import { Container, Profile, Logout } from "./styles";
 import { useAuth } from "../../hooks/auth";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ export function Header() {
 
     function handleSignOut() {
         signOut();
-        navigate("/")
+        navigate("/");
     }
 
 
@@ -36,5 +36,5 @@ export function Header() {
                 <RiShutDownLine />
             </Logout>
         </Container>
-    )
+    );
 }

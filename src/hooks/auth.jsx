@@ -1,11 +1,11 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { api } from "../services/api";
 
-export const AuthContext = createContext({})
+export const AuthContext = createContext({});
 
 export function AuthProvider({ children }) {
     
-    const [data, setData] = useState({})
+    const [data, setData] = useState({});
 
     async function signIn({ email, password }) {
 
@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
 
             localStorage.setItem("@rocketnotes:user", JSON.stringify(user));
 
-            setData({ user })
+            setData({ user });
 
         } catch(error) {
 
@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
     function signOut() {
         localStorage.removeItem("@rocketnotes:user");
 
-        setData({})
+        setData({});
     }
 
     async function updateProfile({ user, avatarFile }) {
@@ -50,7 +50,7 @@ export function AuthProvider({ children }) {
             localStorage.setItem("@rocketnotes:user", JSON.stringify(user));
 
             setData({ user, token: data.token });
-            alert("Dados do usuário atualizados com sucesso!")
+            alert("Dados do usuário atualizados com sucesso!");
 
 
         } catch (error) {
@@ -70,10 +70,10 @@ export function AuthProvider({ children }) {
 
             setData({
                 user: JSON.parse(user)
-            })
+            });
         }
         
-    }, [])
+    }, []);
 
     return (
         <AuthContext.Provider value={{ 
@@ -85,13 +85,13 @@ export function AuthProvider({ children }) {
         }}>
             {children}
         </AuthContext.Provider>
-    )
+    );
 
 }
 
 export function useAuth(){
     const context = useContext(AuthContext);
 
-    return context
+    return context;
 }
 

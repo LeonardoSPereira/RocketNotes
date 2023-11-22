@@ -11,13 +11,14 @@ export function Routes() {
     useEffect(() => {
         api
          .get("/users/validated")
+         // eslint-disable-next-line no-unused-vars
          .catch((error) => signOut() );
 
-    }, [])
+    });
 
     return (
         <BrowserRouter>
             { user ? <AppRoutes /> : <AuthRoutes /> }
         </BrowserRouter>
-    )
+    );
 }

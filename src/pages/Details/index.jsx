@@ -9,21 +9,21 @@ import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../services/api";
 
 export function Details() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(null);
 
   const navigate = useNavigate();
   const params = useParams();
 
   function handleNavigate() {
-    navigate(-1)
+    navigate(-1);
   }
 
   async function handleRemove() {
     const confirm = window.confirm("Deseja realmente excluir esta nota?");
 
     if(confirm) {
-      await api.delete(`/notes/${params.id}`, { withCredentials: true })
-      navigate(-1)
+      await api.delete(`/notes/${params.id}`, { withCredentials: true });
+      navigate(-1);
     }
   }
 
@@ -34,8 +34,8 @@ export function Details() {
       setData(response.data);
     }
 
-    fetchDetails()
-  }, [])
+    fetchDetails();
+  });
   
   return (
     <Container>
@@ -68,7 +68,7 @@ export function Details() {
                     
                     <li key={String(link.id)}>
 
-                      <a href={link.url} target="_blank">
+                      <a href={link.url} target="_blank" rel="noreferrer">
                         {link.url}
                       </a>
 
@@ -106,5 +106,5 @@ export function Details() {
       }
 
     </Container>
-  )
+  );
 }

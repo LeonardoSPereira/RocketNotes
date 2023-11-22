@@ -31,7 +31,7 @@ export function SignUp() {
             } else {
                 alert("Não foi possível cadastrar o usuário...Tente novamente mais tarde!");
             }
-         })
+         });
 
     }
     return (
@@ -77,5 +77,5 @@ export function SignUp() {
 
             </Form>
         </Container>
-    )
+    );
 }

@@ -11,6 +11,6 @@ export function AuthRoutes() {
             <Route path="/register" element={<SignUp />} />
 
         </Routes>
-    )
+    );
 }
 

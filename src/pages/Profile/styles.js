@@ -6,13 +6,13 @@ export const Container = styled.div`
     > header {
         width: 100%;
         height: 144px;
-        background: ${ ({theme}) => theme.COLORS.BACKGROUND_900 };
+        background: ${ ({ theme }) => theme.COLORS.BACKGROUND_900 };
         display: flex;
         align-items: center;
         padding: 0 124px;
 
         svg {
-            color: ${ ({theme}) => theme.COLORS.GRAY_100 };
+            color: ${ ({ theme }) => theme.COLORS.GRAY_100 };
             font-size: 24px;
         }
     }
@@ -43,7 +43,7 @@ export const Avatar = styled.div`
     > label {
         width: 48px;
         height: 48px;
-        background-color: ${ ({theme}) => theme.COLORS.ORANGE };
+        background-color: ${ ({ theme }) => theme.COLORS.ORANGE };
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -60,7 +60,7 @@ export const Avatar = styled.div`
         svg {
             width: 20px;
             height: 20px;
-            color: ${ ({theme}) => theme.COLORS.BACKGROUND_800 };
+            color: ${ ({ theme }) => theme.COLORS.BACKGROUND_800 };
         }
     }
 `;

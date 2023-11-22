@@ -1,4 +1,4 @@
-import { Container } from "./styles"
+import { Container } from "./styles";
 
 export function Button({ title, loading = false, ...rest }) {
     return (
@@ -9,5 +9,5 @@ export function Button({ title, loading = false, ...rest }) {
         >
             {loading ? "Carregando..." : title}
         </Container>
-    )
+    );
 }

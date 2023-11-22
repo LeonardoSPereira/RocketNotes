@@ -1,4 +1,4 @@
-import { FiPlus, FiX } from "react-icons/fi"
+import { FiPlus, FiX } from "react-icons/fi";
 import { Container } from "./styles";
 
 export function NoteItem({ isNew: isNew, value, onClick, ...rest }) {
@@ -21,5 +21,5 @@ export function NoteItem({ isNew: isNew, value, onClick, ...rest }) {
 
             </button>
         </Container>
-    )
+    );
 }

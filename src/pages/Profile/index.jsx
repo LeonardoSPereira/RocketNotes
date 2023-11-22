@@ -27,7 +27,7 @@ export function Profile() {
             email,
             old_password: currentPassword,
             password: newPassword,
-        }
+        };
 
         const userUpdated = Object.assign(user, updated);
 
@@ -40,7 +40,7 @@ export function Profile() {
         setAvatarFile(file);
 
         const imagePreview = URL.createObjectURL(file);
-        setAvatar(imagePreview)
+        setAvatar(imagePreview);
     }
 
 
@@ -105,5 +105,5 @@ export function Profile() {
             </Form>
 
         </Container>
-    )
+    );
 }

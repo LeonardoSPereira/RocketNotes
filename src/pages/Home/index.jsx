@@ -20,14 +20,14 @@ export function Home() {
 
     function handleSelectTag(tagName) {
         if(tagName === "all") {
-            return setSelectedTags([])
+            return setSelectedTags([]);
         }
 
         const alreadySelected = selectedTags.includes(tagName);
 
         if(alreadySelected) {
             const filteredTags = selectedTags.filter(tag => tag !== tagName);
-            setSelectedTags(filteredTags)
+            setSelectedTags(filteredTags);
         } else {
             setSelectedTags(prevState => [...prevState, tagName]);
 
@@ -126,5 +126,5 @@ export function Home() {
 
 
         </Container>
-    )
+    );
 }

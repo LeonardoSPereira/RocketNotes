@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import backgroundImg from "../../assets/background.png"
+import backgroundImg from "../../assets/background.png";
 
 export const Container = styled.div`
     height: 100vh;
@@ -17,12 +17,12 @@ export const Form = styled.form`
 
     > h1 {
         font-size: 48px;
-        color: ${ ({theme}) => theme.COLORS.ORANGE };
+        color: ${ ({ theme }) => theme.COLORS.ORANGE };
     }
 
     > p {
         font-size: 14px;
-        color: ${ ({theme}) => theme.COLORS.GRAY_100 };
+        color: ${ ({ theme }) => theme.COLORS.GRAY_100 };
     }
 
     > h2 {
@@ -32,7 +32,7 @@ export const Form = styled.form`
 
     > a {
         margin-top: 124px;
-        color: ${ ({theme}) => theme.COLORS.ORANGE };
+        color: ${ ({ theme }) => theme.COLORS.ORANGE };
     }
 `;
 

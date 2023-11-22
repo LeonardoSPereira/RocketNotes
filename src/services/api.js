@@ -8,4 +8,4 @@ export const api = axios.create({
     //dev URL
     //baseURL: "http://localhost:3333",
 
-})
+});
