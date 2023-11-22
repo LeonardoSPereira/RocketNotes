@@ -35,7 +35,7 @@ export function Details() {
     }
 
     fetchDetails();
-  });
+  }, []);
   
   return (
     <Container>
